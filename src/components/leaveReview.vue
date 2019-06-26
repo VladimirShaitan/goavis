@@ -1,11 +1,6 @@
 <template>
-  <div class="container qr-form">
-    <div class="row">
-      <div class="col-12">
-        <div class="branch-wrapper">
-          <div class="branch-photo" :style="{ backgroundImage: 'url('+org_logo+')' }"></div>
-          <div class="branch-name">{{org_name}}</div>
-        </div>
+      <div>
+        <goAvisHeader />
         <p class="message">{{lang.leaveReviewTopMessage}}</p>
         <form id="featured_upload" @submit="sendReview" @change="formChange" enctype="multipart/form-data">
           <div class="fake_disable hidden"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
@@ -32,7 +27,6 @@
               <p style="text-align: center;">{{lang.leaveReviewPhoneHeader}}</p>
               <div class="input-wrapper">
                 <div class="input-phone">
-                  <!--<input type="text" name="phone">-->
                   <vue-tel-input v-model="phone" name="phone"></vue-tel-input>
                 </div>
               </div>
@@ -47,28 +41,24 @@
             <input id="submit_my_image_upload" name="submit_my_image_upload" type="submit" disabled :value="lang.leaveReviewFormSubmit" />
           </div>
         </form>
-
-
         <p class="accept" v-html="lang.leaveReviewAgreement"></p>
-        <a href="#" class="logo"><img src="../assets/imgs/avislogo.png" alt=""></a>
       </div>
-    </div>
-  </div>
 </template>
 
 <script>
   import VueTelInput from 'vue-tel-input';
   import 'vue-tel-input/dist/vue-tel-input.css';
-
   import coockies from '../assets/js/coockies.js'
   import serialize from  '../assets/js/serialize.js'
   import axios from 'axios'
+  import goAvisHeader from "./goAvisHeader";
 
   export default {
       name: "leaveReview",
       props: ['lang'],
       components: {
-        VueTelInput
+        VueTelInput,
+        goAvisHeader
       },
       data(){
         return {
@@ -82,15 +72,6 @@
       created: function () {
         this.barnch_id = localStorage.getItem('branchid');
         this.qr_type = localStorage.getItem('qrtype');
-
-        axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+this.barnch_id )
-          .then((resp) => {
-            this._data.org_name = resp.data.organization.name;
-            this._data.org_logo = resp.data.organization.logoUrl;
-          } )
-          .catch((error) => {
-            console.log(error);
-          })
       },
       methods:{
           sendReview(e){

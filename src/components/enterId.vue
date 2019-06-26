@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <div class="row">
+  <!--<div class="container">-->
+    <!--<div class="row">-->
       <div class="col-12">
         <a href="/" class="logo"><img src="../assets/imgs/avislogo.png" alt="avis.help"></a>
         <form id="branch_uid">
@@ -21,8 +21,8 @@
           <input type="hidden" name="id">
         </form>
       </div>
-    </div>
-  </div>
+    <!--</div>-->
+  <!--</div>-->
 </template>
 
 <script>

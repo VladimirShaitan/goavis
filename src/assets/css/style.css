@@ -57,6 +57,9 @@ body {
     display: block;
     margin-bottom: 30px;
 }
+a.logo.logo_footer {
+    margin-top: 35px;
+}
 .logo img {
     width: 100%;
 }
