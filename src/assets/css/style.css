@@ -106,6 +106,9 @@ a.logo.logo_footer {
     letter-spacing: 0.05px;
     text-align: center;
 }
+.autotabbed input {
+    text-transform: uppercase;
+}
 .home .input-wrapper input {
     text-transform: uppercase;
 }

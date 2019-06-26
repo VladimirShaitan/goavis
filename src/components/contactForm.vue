@@ -1,7 +1,4 @@
 <template>
-  <!--<div class="container qr-form">-->
-    <!--<div class="row">-->
-      <!--<div class="col-12">-->
   <div>
         <h3>{{lang.contactHeader}}</h3>
         <div role="form" class="wpcf7" id="wpcf7-f126-o1" lang="en-US" dir="ltr">
@@ -41,10 +38,7 @@
         </div>
         <p class="accept contact" v-html="lang.contactSendingAgreement"></p>
         <a href="https://go.avis.help/review/?branchid=51&amp;qrtype=GENERAL" class="how-works "> {{lang.contactSHIW}}</a>
-        <!--<a href="#" class="logo"><img src="../assets/imgs/avislogo.png" alt=""></a>-->
       </div>
-    <!--</div>-->
-  <!--</div>-->
 </template>
 
 <script>
