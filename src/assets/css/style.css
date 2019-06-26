@@ -1,0 +1,673 @@
+/*
+ * Theme Name: 		Avis.help
+ * Theme URI: 		https://html-studio.fr/
+ * Author: 			HTML Studio
+ *
+ * License: GNU General Public License v3.0 or later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ * 
+ */
+
+/* general */
+body {
+    padding-top: 50px;
+    max-width: 450px;
+    margin: 0 auto;
+    height: 100vh;
+}
+.language-switcher {
+    text-align: right;
+    padding: 0 20px;
+    margin-bottom: 5px;
+}
+.language-switcher select {
+    width: 30px;
+    padding: 0;
+    color: #575e6e;
+    text-transform: uppercase;
+    border: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    background-image: url('../imgs/arr.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    font-family: "Avenir";
+    font-size: 15px;
+    background-color: white;
+}
+.language-switcher select:active,
+.language-switcher select:focus,
+.language-switcher select option{
+    outline: 0;
+    border: 0;
+}
+.col-12 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* home page */
+.logo {
+    height: 71px;
+    width: 158px;
+    display: block;
+    margin-bottom: 30px;
+}
+.logo img {
+    width: 100%;
+}
+.branch-id-wrapper,
+.contact-wrapper {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 10px 26px 28px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+
+@media(max-width: 330px){
+    .branch-id-wrapper {
+        padding: 10px 10px 28px;
+    }
+}
+.branch-id-wrapper h3 {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.05px;
+    margin-bottom: 20px;
+}
+.input-wrapper {
+    border-bottom: 2px solid #575e6e;
+    padding: 10px;
+}
+.input-wrapper input {
+    width: 45px;
+    height: 40px;
+    border: 0;
+    padding: 0 5px;
+    line-height:40px;
+    color: #fd4f56;
+    font-family: "Avenir";
+    font-size: 35px;
+    font-weight: 900;
+    letter-spacing: 0.05px;
+    text-align: center;
+}
+.home .input-wrapper input {
+    text-transform: uppercase;
+}
+.input-wrapper input:focus {
+    border: 0;
+    outline: 0;
+}
+.input-wrapper input::-webkit-input-placeholder {
+    color: #d8d8d8;
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+    line-height:40px;
+}
+.input-wrapper input::-moz-placeholder {
+    color: #d8d8d8;
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+    line-height:40px;
+}
+.input-wrapper input:-ms-input-placeholder {
+    color: #d8d8d8;
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+    line-height:40px;
+}
+.input-wrapper input:-moz-placeholder {
+    color: #d8d8d8;
+    font-weight:bold;
+    font-size:30px;
+    text-align:center;
+    line-height:40px;
+}
+.branch-id-wrapper+input[type="submit"],
+input[type="submit"],
+.how-works,
+.how-works:hover,
+.how-works:active,
+.how-works:focus,
+.nps-wrap input[type="submit"] {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: "Avenir";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 3.39px;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(#f68f8f 0%, #e95656 100%);
+    background-image: -o-linear-gradient(#f68f8f 0%, #e95656 100%);
+    background-image: linear-gradient(#f68f8f 0%, #e95656 100%);
+    outline: none;
+    border: none;
+    padding: 20px 62px;
+    display: block;
+    margin: 0 auto;
+
+}
+
+/* qr form page */
+
+.qr-form .branch-wrapper,
+.number-form .branch-wrapper{
+    display: flex;
+    width: 100%;
+}
+.qr-form .branch-photo,
+.number-form .branch-photo{
+    width: 76px;
+    height: 76px;
+    border: 1px solid #979797;
+    background-color: #d8d8d8;
+    display: block;
+    border-radius: 50%;
+    margin-right: 20px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.qr-form .branch-name,
+.number-form .branch-name{
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.05px;
+    margin-top: 10px;
+}
+.qr-form .message{
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+    margin: 25px 0;
+}
+.qr-form h3{
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.05px;
+}
+.qr-form .input-wrapper,
+.number-form .input-wrapper{
+    border-bottom: 2px solid #575e6e;
+    padding: 5px 5px 0;
+}
+.qr-form .input-wrapper input,
+.number-form .input-wrapper input{
+    width: 100%;
+    height: 40px;
+    border: 0;
+    padding: 0 5px;
+    line-height:40px;
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.05px;
+    text-align: left;
+}
+.qr-form .input-wrapper input::-webkit-input-placeholder,
+.number-form .input-wrapper input::-webkit-input-placeholder {
+   color: #575e6e;
+    font-family: "Avenir";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03px;
+    text-align:left;
+}
+.qr-form .input-wrapper input::-moz-placeholder,
+.number-form .input-wrapper input::-moz-placeholder {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03px;
+    text-align:left;
+}
+.qr-form .input-wrapper input:-ms-input-placeholder,
+.number-form .input-wrapper input:-ms-input-placeholder{
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03px;
+    text-align:left;
+}
+.qr-form .input-wrapper input:-moz-placeholder,
+.number-form .input-wrapper input:-moz-placeholder{
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.03px;
+    text-align:left;
+}
+.qr-form .branch-id-wrapper+input[type="submit"],
+.wpcf7-form input[type="submit"] {
+    padding: 20px 70px;
+    display: block;
+    margin: 0 auto;
+}
+.qr-form .branch-id-wrapper+input#submit_my_image_upload[disabled] {
+    opacity: 0.7;
+}
+.qr-form .accept {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.03px;
+    letter-spacing: 0.02px;
+    margin-top: 10px;
+    margin-bottom: 35px;
+    padding: 0 75px;
+    text-align: center;
+}
+.qr-form .accept>a,
+.qr-form .accept>a:focus,
+.qr-form .accept>a:hover,
+.qr-form .accept>a:active{
+    color: #575e6e;
+    text-decoration: underline;
+}
+.qr-form .branch-id-wrapper:nth-child(2){
+    padding: 25px 0;
+}
+.qr-form .logo,
+.number-form .logo,
+.logo.finish{
+    width: 75px;
+    height: 40px;
+}
+.qr-form input[type="file"] {
+    display: none;
+}
+.qr-form .label-upload {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url(../imgs/photo.svg);
+    background-position: center center;
+    background-size: contain;
+    margin-bottom: 0;
+}
+
+.qr-form .label-upload.label-uploaded{
+    background-image: url(../imgs/tick.png);
+}
+.starrating > input {display: none;}  
+.starrating > label:before { 
+  content: "";
+    display:block;
+    width: 40px;
+    height: 40px;
+    background-image: url(../imgs/star2.svg)
+}
+.starrating > label
+{
+    margin-right: 15px;
+}
+.starrating > input:checked ~ label:before
+{background-image: url(../imgs/star.svg)}
+.starrating > input:hover ~ label:before
+{ background-image: url(../imgs/star.svg)}
+
+/* number form page */
+
+.number-form h3 {
+    color: #ed6868;
+    font-family: "Avenir";
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.04px;
+    margin: 20px 0;
+    text-align: center;
+}
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #ececec;
+}
+.number-form .branch-name {
+    margin: 15px 0 20px;
+}
+.number-form .branch-id-wrapper {
+    text-align: left;
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+}
+.number-form .branch-id-wrapper p {
+    margin-bottom: 0;
+}
+.number-form input[type="submit"]{
+    padding: 20px 31px;
+    margin-bottom: 40px;
+}
+.number-form .accept {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.number-form .accept>a {
+    color: #575e6e;
+    text-decoration: underline;
+}
+.number-form .accept+a {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+    text-decoration: underline;
+    margin-bottom: 90px;
+}
+.input-group{
+    display: flex;
+}
+.input-group-btn {
+    width: 40%;
+}
+.input-group .form-control:not(:first-child):not(:last-child){
+    width: 60%;
+}
+.form-control,
+.form-control:focus{
+    box-shadow: none;
+    -webkit-box-shadow:none;
+}
+.dropdown-toggle {
+    height: 40px;
+    border: 0;
+}
+.open>.dropdown-toggle.btn-default:focus, .open>.dropdown-toggle.btn-default:hover,
+.btn.focus, .btn:focus,
+.btn-default:active:hover{
+    border: 0;
+    background: white;
+    outline: 0;
+    box-shadow: none;
+}
+.caret {
+    display: none;
+}
+.dropdown-menu {
+    max-width:315px;
+    z-index: 9999;
+}
+.popover {
+    z-index: 1;
+}
+.popover.right>.arrow {
+    display: none;
+}
+.popover.right {
+    top: 585px!important;
+    left: 125px!important;
+    margin-right: 40px!important;
+    background-color: rgba(211, 47, 47,.8);
+}
+.logo.finish {
+    margin-top: 200px;
+}
+.finish-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.company-name,
+.promo-code-name {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.05px;
+    text-align: center;
+    margin-bottom: 20px;
+ }
+ .promo-code-description {
+    text-align: center;
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+ }
+ .promo-code-wrapper{
+    display: block;
+    margin: 0 auto;
+    width: 51px;
+    height: 51px;
+    border-radius: 5px;
+    background-image: linear-gradient(180deg, #f68f8f 0%, #e95656 100%);
+    margin-bottom: 15px;
+    text-align: center;
+ }
+ .promo-code-date {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.04px;
+    text-align: center;
+ }
+  .promo-code-wrapper .fas {
+    color: #fff;
+    font-size: 20px;
+    line-height: 50px;
+  }
+  .promo-code-qr {
+    display: block;
+    margin: 20px auto;
+  }
+  .number-form .branch-id-wrapper {
+    position: relative;
+  }
+  .number-form .branch-id-wrapper .experied-block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    background-color: rgba(155, 155, 155, 0.5);
+    color: #ffffff;
+    font-family: "Avenir";
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 0.05px;
+  }
+  .qr-form .contact-wrapper {
+    margin: 25px 0 15px;
+    border-bottom:0;  
+    padding: 10px 0 30px;
+}
+  .qr-form .contact-wrapper input{
+    border: 0px;
+    width: 85%;
+    border-bottom: 2px solid #575e6e;
+    margin-bottom: 30px;
+  }
+.wpcf7-acceptance label {
+    line-height: 1;
+        display: flex;
+}
+.wpcf7-acceptance  .wpcf7-list-item-label {
+    color: #575e6e;
+    font-family: "Avenir";
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.03px;
+    line-height: 1.3;
+  }
+  input[type=checkbox] {
+    margin-right: 5px;
+  }
+  .wpcf7-form input[type="submit"] {
+    margin-top: 30px;
+  }
+  .wpcf7-form p {
+    margin-bottom: 0;
+  }
+  .accept.contact {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+
+.how-works,
+.how-works:hover,
+.how-works:active,
+.how-works:focus  {
+    padding: 20px 26px;
+    margin-bottom: 60px;
+  }
+  .how-works-fr,
+.how-works-fr:hover,
+.how-works-fr:active,
+.how-works-fr:focus {
+    font-size: 13px;
+  }
+  .image-download {
+    padding: 15px;
+    width: 30%;
+    margin: 0;
+  }
+  #submit_my_image_upload {
+    width: 67%;
+    text-align: center;
+    padding: 20px 0;
+    margin:unset;
+  }
+.form-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+  .fake_disable {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 99999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.qr-form  .branch-id-wrapper.padding{
+    padding: 10px 26px 28px; 
+}
+form {
+    width:100%;
+}
+.nps-wrapper {
+    padding: 40px 0;
+}
+.nps-wrapper label{
+    background-color: #c30018;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    font-size: 20px;
+    font-family: "Avenir";
+    font-weight: 900;
+    margin-right: 12px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition:  0.3s;
+}
+.nps-wrapper input:checked+label {
+    transform: scale(1.1);
+}
+.nps-wrapper p {
+    position: relative;
+    display: inline;
+}
+.nps-wrapper input {
+    display: none;
+}
+.nps-wrapper .green {
+     background-color: #67b54b;
+}
+.nps-wrapper .yellow {
+     background-color: #f2e542;
+}
+.nps-wrapper input+label+span{
+    border:1px solid transparent;
+    transition: .2s;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 13px;
+    top: 12px;
+}
+.nps-wrapper input:checked+label+span {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    border: 1px solid #c30018;
+    display: block;
+    position: absolute;
+    left: -6px;
+    top: -18px;
+}
+.nps-wrapper input:checked+label.green+span {
+    border:1px solid #67b54b;
+}
+.nps-wrapper input:checked+label.yellow+span {
+    border:1px solid #f2e542;
+}
+.branch-id-wrapper.nps-wrap {
+    margin-top: 50px;
+    padding: 17px 0 30px;
+}
+.nps-wrap h3 {
+    padding: 0 50px;
+}
+.nps-wrap input#submit_nps[disabled] {
+    opacity: 0.7;
+}
+.hidden {
+    display: none!important;
+}

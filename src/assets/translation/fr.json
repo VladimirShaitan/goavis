@@ -1,0 +1,23 @@
+{
+	"lang":"fr",
+	"contactHeader": "Laissez vos informations",
+	"contactPlName": "Prénom",
+	"contactPlEmail": "Email",
+	"contactPlPhone": "Téléphone",
+	"contactAgreement": "En utilisant ce formulaire vous acceptez l'utilisation de vos données en conformité avec la nouvelle législation en vigueur (RGPD 2018)",
+	"contactSendingAgreement": "En appuyant sur le bouton «Envoyer», vous acceptez <a href='/terms-of-use/'>les conditions d'utilisation.</a>",
+	"contactSHIW": "Regarde comment ça marche",
+	"contactSendBtn": "Envoyer",
+	"enterIDHeader": "Veuillez entrer l'ID de la succursale",
+	"enterIDContinueBTN": "Continuer",
+	"leaveReviewTopMessage": "Si vous avez des remarques ou suggestions concernant la qualité des offres ou services, n’hésitez pas à laisser un commentaire. Tous les messages seront transmis à la direction.",
+	"leaveReviewFormHeader": "Impression générale*",
+	"leaveReviewCommentField": "Commentaire",
+	"leaveReviewPhoneHeader": "Si vous le souhaitez, vous pouvez laisser votre numéro et nous vous recontacterons ",
+	"leaveReviewFormSubmit": "Envoyer",
+	"leaveReviewAgreement": "En appuyant sur le bouton «Envoyer», vous acceptez <a href='/terms-of-use/'>les conditions d'utilisation</a>.",
+	"npsThanks": "Je vous remercie! <br>Nous voulons être meilleurs.",
+	"npsHeader": "Quelle est la probabilité que vous recommandiez notre société à un ami, un membre de votre famille ou un collègue? ",
+	"npsDescr": " 0 - ne recommande pas, 10 - recommande vivement",
+	"npsSend": "Envoyer"
+}
