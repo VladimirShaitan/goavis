@@ -3,16 +3,16 @@
     <div class="row">
       <div class="col-12">
         <div class="branch-wrapper">
-          <div class="branch-photo" style="background-image: url(<?php echo $organization->organization->logoUrl; ?>)"></div>
-          <div class="branch-name"><?php echo $organization->name; ?></div>
+          <div class="branch-photo" :style="{ backgroundImage: 'url('+org_logo+')' }"></div>
+          <div class="branch-name">{{org_name}}</div>
         </div>
         <form id="nps_form" method="post" action="#" enctype="multipart/form-data">
           <div class="fake_disable hidden"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
           <div class="branch-id-wrapper nps-wrap">
-            <h3 class="finish hidden" v-html="npsThanks"></h3>
+            <h3 class="finish hidden" v-html="lang.npsThanks"></h3>
             <div class="nps-container">
-              <h3>{{npsHeader}}</h3>
-              <p style="text-align: center;">{{npsDescr}}</p>
+              <h3>{{lang.npsHeader}}</h3>
+              <p style="text-align: center;">{{lang.npsDescr}}</p>
               <div class="nps-wrapper">
                 <input type="radio" name="nps" value="0" id="nps-0"><label for="nps-0">0 <span></span></label>
                 <input type="radio" name="nps" value="1" id="nps-1"><label for="nps-1">1 <span></span></label>
@@ -27,7 +27,7 @@
                 <input type="radio" name="nps" value="10" id="nps-10"><label class="green" for="nps-10">10 <span></span></label>
 
               </div>
-              <input id="submit_nps" name="submit_nps" type="submit" disabled :value="npsSend" />
+              <input id="submit_nps" name="submit_nps" type="submit" disabled :value="lang.npsSend" />
             </div>
           </div>
         </form>
@@ -38,9 +38,33 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: "npsForm",
-        props: ['lang']
+        props: ['lang'],
+        data(){
+            return {
+              barnch_id: '',
+              qr_type: '',
+              org_name: '',
+              org_logo: ''
+          }
+        },
+        created: function () {
+          this.barnch_id = localStorage.getItem('branchid');
+          this.qr_type = localStorage.getItem('qrtype');
+
+          axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+this.barnch_id )
+            .then((resp) => {
+              this._data.org_name = resp.data.organization.name;
+              this._data.org_logo = resp.data.organization.logoUrl;
+            } )
+            .catch((error) => {
+              console.log(error);
+            })
+        },
+
     }
 </script>
 
