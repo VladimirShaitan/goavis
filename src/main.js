@@ -1,11 +1,11 @@
-import Vue from 'vue'
-import App from './App.vue'
-// Vue.loadScript("https://unpkg.com/axios/dist/axios.min.js");
+import Vue from 'vue';
+import App from './App.vue';
+import router from './assets/js/router.js';
+
 Vue.config.productionTip = false;
 
-console.log(App);
-
 new Vue({
+  router,
   render: h => h(App)
 }).$mount('#app');
 
