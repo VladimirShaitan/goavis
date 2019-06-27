@@ -19,5 +19,6 @@
 	"npsThanks": "Je vous remercie! <br>Nous voulons être meilleurs.",
 	"npsHeader": "Quelle est la probabilité que vous recommandiez notre société à un ami, un membre de votre famille ou un collègue? ",
 	"npsDescr": " 0 - ne recommande pas, 10 - recommande vivement",
-	"npsSend": "Envoyer"
+	"npsSend": "Envoyer",
+	"finishHeader": "Je vous remercie! <br>Nous voulons être meilleurs."
 }

@@ -7,11 +7,11 @@
             <div class="input-wrapper">
               <div class="autotabbed" @keydown="changeFocus">
                 <span></span>
-                <input autofocus d-a="1" type="text" placeholder="—" maxlength="1" class="inputs">
-                <input d-a="2" type="text" placeholder="—" maxlength="1" class="inputs">
-                <input d-a="3" type="text" placeholder="—" maxlength="1" class="inputs">
-                <input d-a="4" type="text" placeholder="—" maxlength="1" class="inputs">
-                <input d-a="5" type="text" placeholder="—" maxlength="1" class="inputs" id="last-input">
+                <input autofocus type="text" placeholder="—" maxlength="1" class="inputs">
+                <input type="text" placeholder="—" maxlength="1" class="inputs">
+                <input type="text" placeholder="—" maxlength="1" class="inputs">
+                <input type="text" placeholder="—" maxlength="1" class="inputs">
+                <input type="text" placeholder="—" maxlength="1" class="inputs" id="last-input">
                 <span></span>
               </div>
             </div>

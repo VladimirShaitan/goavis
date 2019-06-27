@@ -342,7 +342,7 @@ input[type="submit"],
 /* number form page */
 
 .number-form h3 {
-    color: #ed6868;
+    color: #575e6e;
     font-family: "Avenir";
     font-size: 24px;
     font-weight: 800;
@@ -561,6 +561,7 @@ input[type="submit"],
 .how-works:focus  {
     padding: 20px 26px;
     margin-bottom: 60px;
+    text-align: center;
   }
   .how-works-fr,
 .how-works-fr:hover,
@@ -658,3 +659,4 @@ form {
 .hidden {
     display: none!important;
 }
+/*..nps-wrap*/

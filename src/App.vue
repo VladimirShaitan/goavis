@@ -4,15 +4,17 @@
 
   <div id="app">
     <langSwitcher :langs="langs" :current-lang="currentLang" @change-lang="changeLang"/>
-    <div class="container " >
+    <div class="container qr-form " >
       <!--:class="isBranchNeed ? 'qr-form' : ''"-->
       <div class="row">
         <div class="col-12">
 
-            <!--<contactForm :lang="lang" /> &lt;!&ndash; Get started page &ndash;&gt;-->
-            <enterId :langs="lang" />
+            <contactForm :lang="lang" /> <!-- Get started page -->
+            <!--<enterId :langs="lang" />-->
             <!--<leaveReview :lang="lang" />-->
             <!--<npsForm :lang="lang" />-->
+            <!--<finish :lang="lang" />-->
+
             <goAvisFooter />
         </div>
       </div>
@@ -29,7 +31,8 @@ import contactForm from './components/contactForm.vue';
 import enterId from './components/enterId.vue';
 import leaveReview from './components/leaveReview.vue';
 import npsForm from './components/npsForm.vue';
-import goAvisFooter from './components/goAvisFooter';
+import goAvisFooter from './components/goAvisFooter.vue';
+import finish from './components/finish.vue';
 import coockies from './assets/js/coockies.js';
 import ru from './assets/translation/ru.json';
 import en from './assets/translation/en.json';
@@ -47,7 +50,6 @@ export default {
       currentLang: '',
       lang: {}, // translations,
       apiData: {}, // data for api requests,
-      // isBranchNeed: false
     }
   },
   components: {
@@ -56,7 +58,8 @@ export default {
     enterId,
     leaveReview,
     npsForm,
-    goAvisFooter
+    goAvisFooter,
+    finish
   },
   methods: {
     changeLang(langIndex){
@@ -91,11 +94,6 @@ export default {
       ) {
           alert('No GET data');
       }
-      //
-      // if( (coockies.findGetFromUrl('branchid') ||  localStorage.getItem('branchid')) != null ){
-      //   this.isBranchNeed = true;
-      // }
-
 
     // save GET paramethers
 

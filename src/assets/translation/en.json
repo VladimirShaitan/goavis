@@ -19,6 +19,7 @@
     "npsThanks": "Thank you! <br>We want to be better.",
     "npsHeader": "How likely is it that you would recommend our company to a friend, relative or colleague?",
     "npsDescr": "0 - don't recommend, 10 - highly recommend",
-    "npsSend": "Send"
+    "npsSend": "Send",
+    "finishHeader": "Thank you! <br>We want to be better."
 
 }
