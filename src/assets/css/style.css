@@ -36,6 +36,8 @@ body {
     font-family: "Avenir";
     font-size: 15px;
     background-color: white;
+    position: relative;
+    z-index: 2;
 }
 .language-switcher select:active,
 .language-switcher select:focus,

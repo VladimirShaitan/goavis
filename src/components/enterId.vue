@@ -37,9 +37,6 @@
             } else if(e.target.value === '') {
                 prevSib.focus();
             }
-            console.log(e.target);
-            console.log(e.target.value);
-
           },
           getBranchByUID(e){
             e.preventDefault();

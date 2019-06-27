@@ -4,11 +4,14 @@
 
   <div id="app">
     <langSwitcher :langs="langs" :current-lang="currentLang" @change-lang="changeLang"/>
-    <div class="container qr-form " >
+    <div class="container" :class="qrHeader ? 'qr-form' : ''">
       <!--:class="isBranchNeed ? 'qr-form' : ''"-->
       <div class="row">
         <div class="col-12">
+
+          <transition name="fade">
             <router-view :lang="lang"></router-view>
+          </transition>
             <!--<contactForm :lang="lang" /> &lt;!&ndash; Get started page &ndash;&gt;-->
             <!--<enterId :langs="lang" />-->
             <!--<leaveReview :lang="lang" />-->
@@ -48,6 +51,7 @@
         currentLang: '',
         lang: {}, // translations,
         apiData: {}, // data for api requests,
+        qrHeader: true
       }
     },
     components: {
@@ -66,6 +70,8 @@
       }
     },
     created: function () {
+      console.log(this.$router.currentRoute);
+
       // localisation
       if(coockies.get('lang') === undefined){
             coockies.set('lang', user_defaults.language);
@@ -95,6 +101,10 @@
 
       // save GET paramethers
 
+
+      if(this.$router.currentRoute.name === 'main'){
+          this.qrHeader = false
+      }
     }
   }
 
