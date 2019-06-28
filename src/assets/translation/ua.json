@@ -10,6 +10,7 @@
 	"contactSendBtn": "Надіслати",
 	"enterIDHeader": "Будь ласка, введіть ID філії",
     "enterIDContinueBTN": "Продовжити",
+	"enterIDError": "Неправильний ID",
 	"leaveReviewTopMessage": "Якщо у вас є які-небудь скарги або пропозиції щодо якості товарів або обслуговування, будь ласка, залиште відгук. Всі повідомлення будуть спрямовані керівництву.",
 	"leaveReviewFormHeader": "Загальне враження*",
 	"leaveReviewCommentField": "Коментар",

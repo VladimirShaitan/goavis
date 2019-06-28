@@ -5,12 +5,11 @@
   <div id="app">
     <langSwitcher :langs="langs" :current-lang="currentLang" @change-lang="changeLang"/>
     <div class="container" :class="qrHeader ? 'qr-form' : ''">
-      <!--:class="isBranchNeed ? 'qr-form' : ''"-->
       <div class="row">
         <div class="col-12">
 
           <transition name="fade">
-            <router-view :lang="lang"></router-view>
+            <router-view :lang="lang" @qr-header="qrHeaderChange"></router-view>
           </transition>
             <!--<contactForm :lang="lang" /> &lt;!&ndash; Get started page &ndash;&gt;-->
             <!--<enterId :langs="lang" />-->
@@ -67,7 +66,11 @@
       changeLang(langIndex){
         this.lang = get_translations(langIndex);
         coockies.set('lang', langIndex);
+      },
+      qrHeaderChange(show){
+        this.qrHeader = show
       }
+
     },
     created: function () {
       console.log(this.$router.currentRoute);
@@ -102,9 +105,9 @@
       // save GET paramethers
 
 
-      if(this.$router.currentRoute.name === 'main'){
-          this.qrHeader = false
-      }
+      // if(this.$router.currentRoute.name === 'main'){
+      //     this.qrHeader = false
+      // }
     }
   }
 

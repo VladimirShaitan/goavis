@@ -10,6 +10,7 @@
 	"contactSendBtn": "Envoyer",
 	"enterIDHeader": "Veuillez entrer l'ID de la succursale",
 	"enterIDContinueBTN": "Continuer",
+	"enterIDError": "Mauvais identifiant",
 	"leaveReviewTopMessage": "Si vous avez des remarques ou suggestions concernant la qualité des offres ou services, n’hésitez pas à laisser un commentaire. Tous les messages seront transmis à la direction.",
 	"leaveReviewFormHeader": "Impression générale*",
 	"leaveReviewCommentField": "Commentaire",

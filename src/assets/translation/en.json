@@ -10,6 +10,7 @@
     "contactSendBtn": "Send",
     "enterIDHeader": "Please enter branch ID",
     "enterIDContinueBTN": "Continue",
+    "enterIDError": "Wrong id",
     "leaveReviewTopMessage": "If you have any complaints or suggestions regarding the quality of goods or services, please leave a review. All messages will be forwarded to management.",
     "leaveReviewFormHeader": "General Impression*",
     "leaveReviewCommentField": "Comment",

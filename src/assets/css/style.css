@@ -70,7 +70,7 @@ a.logo.logo_footer {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: #ffffff;
-    padding: 10px 26px 28px;
+    padding: 10px 26px 12px;
     text-align: center;
     width: 100%;
     margin-bottom: 30px;
@@ -662,3 +662,17 @@ form {
     display: none!important;
 }
 /*..nps-wrap*/
+
+.error {
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ec6464;
+    min-height: 30px;
+    visibility: hidden;
+}
+
+.branch-id-wrapper+input[type="submit"][disabled] {
+    background: #ccc;
+    cursor: not-allowed
+}

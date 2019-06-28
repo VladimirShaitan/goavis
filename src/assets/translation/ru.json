@@ -10,6 +10,7 @@
 	"contactSendBtn": "Отправить",
     "enterIDHeader": "Пожалуйста, введите ID филиала",
     "enterIDContinueBTN": "Продолжить",
+	"enterIDError": "Неправильный ID",
 	"leaveReviewTopMessage": "Если у вас есть какие-либо жалобы или предложения относительно качества товаров или обслуживания, пожалуйста, оставьте отзыв. Все сообщения будут направлены руководству.",
 	"leaveReviewFormHeader": "Общее впечатление*",
 	"leaveReviewCommentField": "Комментарий",

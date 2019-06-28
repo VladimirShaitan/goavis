@@ -1,7 +1,7 @@
 <template>
     <ul class="language-switcher">
       <select @change="changeLang" v-model="selected">
-        <option v-for="lang in langs" :value="lang" :se="currentLang">{{lang}}</option>
+        <option v-for="lang in langs" :value="lang" >{{lang}}</option>
       </select>
 
     </ul>
