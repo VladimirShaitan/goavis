@@ -8,6 +8,7 @@
 	"contactSendingAgreement": "En appuyant sur le bouton «Envoyer», vous acceptez <a href='/terms-of-use/'>les conditions d'utilisation.</a>",
 	"contactSHIW": "Regarde comment ça marche",
 	"contactSendBtn": "Envoyer",
+	"contactSendedSuccess": "Merci. Le message a bien été envoyé.",
 	"enterIDHeader": "Veuillez entrer l'ID de la succursale",
 	"enterIDContinueBTN": "Continuer",
 	"enterIDError": "Mauvais identifiant",

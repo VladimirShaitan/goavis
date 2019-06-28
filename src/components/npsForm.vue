@@ -34,6 +34,7 @@
     import axios from 'axios';
     import serialize from '../assets/js/serialize';
     import goAvisHeader from './goAvisHeader.vue';
+    import router from '../assets/js/router.js'
 
     export default {
         name: "npsForm",
@@ -67,11 +68,14 @@
             e.target.form.querySelector('input[type="submit"]').removeAttribute('disabled');
           },
           sendNPS(e){
+
+
             e.preventDefault();
 
             axios.post('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/nps/addNps?'+ serialize(e.target))
-              .then(function (response) {
-                console.log(response)
+              .then(function (resp) {
+                // console.log(resp.data)
+                router.push({name: 'finish'});
               })
               .catch(function (error) {
                 alert(error)

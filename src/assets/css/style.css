@@ -522,7 +522,7 @@ input[type="submit"],
   .qr-form .contact-wrapper {
     margin: 25px 0 15px;
     border-bottom:0;  
-    padding: 10px 0 30px;
+    padding: 10px 0 20px;
 }
   .qr-form .contact-wrapper input{
     border: 0px;
@@ -672,7 +672,16 @@ form {
     visibility: hidden;
 }
 
-.branch-id-wrapper+input[type="submit"][disabled] {
+.branch-id-wrapper+input[type="submit"][disabled], input[type="submit"][disabled] {
     background: #ccc;
     cursor: not-allowed
+}
+
+.message-send {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 13px;
+    margin-top: -10px;
+    transition: .3s;
+    opacity: 0;
 }

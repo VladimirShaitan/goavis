@@ -143,7 +143,6 @@
       }
     }
     return lang_index;
-
   }
 
 </script>

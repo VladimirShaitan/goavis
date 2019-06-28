@@ -8,6 +8,7 @@
     "contactSendingAgreement": " By pressing button “Send”, you agree with <a href='/terms-of-use/'>terms of use</a>",
     "contactSHIW": "See how it works",
     "contactSendBtn": "Send",
+    "contactSendedSuccess": "Thank you for your message. It has been sent.",
     "enterIDHeader": "Please enter branch ID",
     "enterIDContinueBTN": "Continue",
     "enterIDError": "Wrong id",

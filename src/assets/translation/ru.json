@@ -8,6 +8,7 @@
 	"contactSendingAgreement": "Нажав кнопку «Отправить», вы принимаете <a href='/terms-of-use/'>правила пользовательского соглашения</a>",
 	"contactSHIW": "Демонстрация",
 	"contactSendBtn": "Отправить",
+	"contactSendedSuccess": "Спасибо за Ваше сообщение. Оно успешно отправлено.",
     "enterIDHeader": "Пожалуйста, введите ID филиала",
     "enterIDContinueBTN": "Продолжить",
 	"enterIDError": "Неправильный ID",

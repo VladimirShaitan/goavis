@@ -52,6 +52,7 @@
   import serialize from  '../assets/js/serialize.js'
   import axios from 'axios'
   import goAvisHeader from "./goAvisHeader";
+  import router from '../assets/js/router.js'
 
   export default {
       name: "leaveReview",
@@ -82,8 +83,11 @@
             formData.append('file', imagefile.files[0]);
 
             axios.post('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/review/addReview/'+this.barnch_id+'?'+ serialize(e.target), formData)
-              .then(function (response) {
-                console.log(response)
+              .then(function (resp) {
+                console.log(resp.data);
+                if(resp.data.success){
+                  router.push({name: 'nps'});
+                }
               })
               .catch(function (error) {
                 alert(error)
@@ -94,7 +98,6 @@
                 var label = e.target.parentElement.querySelector('label.label-upload');
                 label.classList.add('label-uploaded');
             }
-          console.dir();
           if(e.target.name === 'impression'){
             e.target.form.querySelector('input[type="submit"]').removeAttribute('disabled');
           }
