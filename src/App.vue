@@ -4,13 +4,14 @@
 
   <div id="app">
     <langSwitcher :langs="langs" :current-lang="currentLang" @change-lang="changeLang"/>
+
     <div class="container" :class="qrHeader ? 'qr-form' : ''">
       <div class="row">
         <div class="col-12">
 
-          <transition appear name="fade">
+          <!--<transition name="fade">-->
             <router-view :lang="lang" @qr-header="qrHeaderChange"></router-view>
-          </transition>
+          <!--</transition>-->
 
             <goAvisFooter />
         </div>

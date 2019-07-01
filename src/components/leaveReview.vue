@@ -1,46 +1,54 @@
 <template>
-      <div>
-        <goAvisHeader />
-        <p class="message">{{lang.leaveReviewTopMessage}}</p>
-        <form id="featured_upload" @submit="sendReview" @change="formChange" enctype="multipart/form-data">
-          <div class="fake_disable hidden"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
-          <div class="branch-id-wrapper padding">
-            <h3>{{lang.leaveReviewFormHeader}}</h3>
-            <div class="input-wrapper">
-              <div class="container">
-                <div class="starrating risingstar d-flex justify-content-center flex-row-reverse">
-                  <input type="radio" id="star5" name="impression" value="5" /><label for="star5" title="5 star"></label>
-                  <input type="radio" id="star4" name="impression" value="4" /><label for="star4" title="4 star"></label>
-                  <input type="radio" id="star3" name="impression" value="3" /><label for="star3" title="3 star"></label>
-                  <input type="radio" id="star2" name="impression" value="2" /><label for="star2" title="2 star"></label>
-                  <input type="radio" id="star1" name="impression" value="1" /><label for="star1" title="1 star"></label>
-                </div>
-              </div>
+      <div class="lr">
 
-              <input type="text" name="message" :placeholder="lang.leaveReviewCommentField">
-              <input type="hidden" name="qrType" :value="qr_type">
-            </div>
+        <transition appear name="slide-top">
+          <div>
+            <goAvisHeader />
+            <p class="message">{{lang.leaveReviewTopMessage}}</p>
           </div>
+          </transition>
 
-          <div class="number-form">
-            <div class="branch-id-wrapper">
-              <p style="text-align: center;">{{lang.leaveReviewPhoneHeader}}</p>
+        <transition appear name="slide-bottom">
+          <form id="featured_upload" @submit="sendReview" @change="formChange" enctype="multipart/form-data">
+            <div class="fake_disable hidden"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
+            <div class="branch-id-wrapper padding">
+              <h3>{{lang.leaveReviewFormHeader}}</h3>
               <div class="input-wrapper">
-                <div class="input-phone">
-                  <vue-tel-input v-model="phone" name="phone" v-bind:placeholder="lang.leaveReviewPhoneNumber"></vue-tel-input>
+                <div class="container">
+                  <div class="starrating risingstar d-flex justify-content-center flex-row-reverse">
+                    <input type="radio" id="star5" name="impression" value="5" /><label for="star5" title="5 star"></label>
+                    <input type="radio" id="star4" name="impression" value="4" /><label for="star4" title="4 star"></label>
+                    <input type="radio" id="star3" name="impression" value="3" /><label for="star3" title="3 star"></label>
+                    <input type="radio" id="star2" name="impression" value="2" /><label for="star2" title="2 star"></label>
+                    <input type="radio" id="star1" name="impression" value="1" /><label for="star1" title="1 star"></label>
+                  </div>
+                </div>
+
+                <input type="text" name="message" :placeholder="lang.leaveReviewCommentField">
+                <input type="hidden" name="qrType" :value="qr_type">
+              </div>
+            </div>
+
+            <div class="number-form">
+              <div class="branch-id-wrapper">
+                <p style="text-align: center;">{{lang.leaveReviewPhoneHeader}}</p>
+                <div class="input-wrapper">
+                  <div class="input-phone">
+                    <vue-tel-input v-model="phone" name="phone" v-bind:placeholder="lang.leaveReviewPhoneNumber"></vue-tel-input>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="form-footer">
-            <div class="branch-id-wrapper image-download">
-              <label for="my_image_upload" class="label-upload"></label>
-              <input type="file" id="my_image_upload"  multiple="false" accept="image/*" />
-            </div>
+            <div class="form-footer">
+              <div class="branch-id-wrapper image-download">
+                <label for="my_image_upload" class="label-upload"></label>
+                <input type="file" id="my_image_upload"  multiple="false" accept="image/*" />
+              </div>
 
-            <input id="submit_my_image_upload" name="submit_my_image_upload" type="submit" disabled :value="lang.leaveReviewFormSubmit" />
-          </div>
-        </form>
+              <input id="submit_my_image_upload" name="submit_my_image_upload" type="submit" disabled :value="lang.leaveReviewFormSubmit" />
+            </div>
+          </form>
+        </transition>
         <p class="accept" v-html="lang.leaveReviewAgreement"></p>
       </div>
 </template>
@@ -116,5 +124,9 @@
 
   .vue-tel-input:focus-within{
     box-shadow: none
+  }
+  @media(max-width: 420px){
+    .lr{width: 100%}
+
   }
 </style>

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <transition appear name="slide-bottom">
+    <div>
         <goAvisHeader />
         <form id="nps_form" @change="enableSubmit" @submit="sendNPS">
           <div class="fake_disable hidden"><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i></div>
@@ -27,6 +29,9 @@
             </div>
           </div>
         </form>
+    </div>
+    </transition>
+
       </div>
 </template>
 

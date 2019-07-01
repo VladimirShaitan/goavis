@@ -1,5 +1,7 @@
 <template>
   <div>
+    <transition appear name="slide-bottom">
+    <div>
         <h3>{{lang.contactHeader}}</h3>
         <div role="form" class="wpcf7" id="wpcf7-f126-o1" lang="en-US" dir="ltr">
           <div class="screen-reader-response"></div>
@@ -40,6 +42,8 @@
         <p class="accept contact" v-html="lang.contactSendingAgreement"></p>
         <a @click="testAccRev"  href="#" class="how-works "> {{lang.contactSHIW}}</a>
       </div>
+    </transition>
+  </div>
 </template>
 
 <script>
