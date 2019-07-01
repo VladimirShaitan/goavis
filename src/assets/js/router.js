@@ -7,7 +7,7 @@ import leaveReview from '../../components/leaveReview.vue';
 import npsForm from '../../components/npsForm.vue';
 import finish from '../../components/finish.vue'
 
-// console.log(enterId);
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -15,7 +15,8 @@ const routes = [
   {name: 'review', path: '/review', component: leaveReview },
   {name: 'contact-form', path: '/get-started', component: contactForm },
   {name: 'nps',  path: '/nps', component: npsForm },
-  {name: 'finish', path: '/thanks', component: finish }
+  {name: 'finish', path: '/thanks', component: finish },
+  { path: "*", component: enterId }
 ];
 
 export default new VueRouter({

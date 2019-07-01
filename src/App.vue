@@ -8,14 +8,9 @@
       <div class="row">
         <div class="col-12">
 
-          <transition name="fade">
+          <transition appear name="fade">
             <router-view :lang="lang" @qr-header="qrHeaderChange"></router-view>
           </transition>
-            <!--<contactForm :lang="lang" /> &lt;!&ndash; Get started page &ndash;&gt;-->
-            <!--<enterId :langs="lang" />-->
-            <!--<leaveReview :lang="lang" />-->
-            <!--<npsForm :lang="lang" />-->
-            <!--<finish :lang="lang" />-->
 
             <goAvisFooter />
         </div>
@@ -29,11 +24,6 @@
 
 <script>
   import langSwitcher from './components/langSwitcher.vue';
-  // import contactForm from './components/contactForm.vue';
-  // import enterId from './components/enterId.vue';
-  // import leaveReview from './components/leaveReview.vue';
-  // import npsForm from './components/npsForm.vue';
-  // import finish from './components/finish.vue';
   import goAvisFooter from './components/goAvisFooter.vue';
   import coockies from './assets/js/coockies.js';
   import ru from './assets/translation/ru.json';
@@ -55,11 +45,6 @@
     },
     components: {
       langSwitcher,
-      // contactForm,
-      // enterId,
-      // leaveReview,
-      // finish,
-      // npsForm,
       goAvisFooter
     },
     methods: {
@@ -93,7 +78,7 @@
 
             localStorage.setItem('branchid', coockies.findGetFromUrl('branchid'));
             localStorage.setItem('qrtype', coockies.findGetFromUrl('qrtype'));
-            history.replaceState( {} , '/', '/' );
+            history.replaceState( {} , '/', '/review' );
         } else if(
           ( coockies.findGetFromUrl('branchid') && coockies.findGetFromUrl('qrtype')) === null
           &&
@@ -104,10 +89,6 @@
 
       // save GET paramethers
 
-
-      // if(this.$router.currentRoute.name === 'main'){
-      //     this.qrHeader = false
-      // }
     }
   }
 
