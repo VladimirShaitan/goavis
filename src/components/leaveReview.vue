@@ -27,7 +27,7 @@
               <p style="text-align: center;">{{lang.leaveReviewPhoneHeader}}</p>
               <div class="input-wrapper">
                 <div class="input-phone">
-                  <vue-tel-input v-model="phone" name="phone"></vue-tel-input>
+                  <vue-tel-input v-model="phone" name="phone" v-bind:placeholder="lang.leaveReviewPhoneNumber"></vue-tel-input>
                 </div>
               </div>
             </div>

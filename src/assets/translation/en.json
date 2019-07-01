@@ -18,6 +18,7 @@
     "leaveReviewPhoneHeader": "If you want you can leave your number so we can contact you",
     "leaveReviewFormSubmit": "Send",
     "leaveReviewAgreement": "By  pressing button “Send”, you agree with <a href='/terms-of-use/'>terms of use</a>.",
+    "leaveReviewPhoneNumber": "Enter a phone number",
     "npsThanks": "Thank you! <br>We want to be better.",
     "npsHeader": "How likely is it that you would recommend our company to a friend, relative or colleague?",
     "npsDescr": "0 - don't recommend, 10 - highly recommend",

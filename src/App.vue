@@ -99,7 +99,7 @@
           &&
           ( localStorage.getItem('branchid') && localStorage.getItem('qrtype')) === null
         ) {
-            alert('No GET data');
+            // alert('No GET data');
         }
 
       // save GET paramethers

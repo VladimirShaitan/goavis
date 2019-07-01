@@ -1,23 +1,25 @@
 <template>
       <div class="col-12">
         <a href="/" class="logo"><img src="../assets/imgs/avislogo.png" alt="avis.help"></a>
-        <form id="branch_uid" @submit="getBranchByUID" @input="validForm">
+        <form id="branch_uid" @submit="getBranchByUID" >
+          <!--@input="validForm"-->
           <div class="branch-id-wrapper">
             <h3>{{lang.enterIDHeader}}</h3>
             <div class="input-wrapper">
-              <div class="autotabbed" @keydown="changeFocus">
+              <div class="autotabbed" @click="changeFocus">
                 <span></span>
-                <input autofocus type="text" placeholder="—" maxlength="1" class="inputs">
-                <input type="text" placeholder="—" maxlength="1" class="inputs">
-                <input type="text" placeholder="—" maxlength="1" class="inputs">
-                <input type="text" placeholder="—" maxlength="1" class="inputs">
-                <input type="text" placeholder="—" maxlength="1" class="inputs" id="last-input">
+                <input type="text" placeholder="—" required maxlength="1" class="inputs" readonly>
+                <input type="text" placeholder="—" required maxlength="1" class="inputs" readonly>
+                <input type="text" placeholder="—" required maxlength="1" class="inputs" readonly>
+                <input type="text" placeholder="—" required maxlength="1" class="inputs" readonly>
+                <input type="text" placeholder="—" required maxlength="1" class="inputs" id="last-input" readonly>
                 <span></span>
               </div>
             </div>
+            <div><input @keyup="falseInput" type="text" id="fake-input" autofocus autocomplete="off" style="opacity: 0"></div>
             <div class="error">{{lang.enterIDError}}</div>
           </div>
-          <input type="submit" disabled :value="lang.enterIDContinueBTN">
+          <input type="submit" :value="lang.enterIDContinueBTN">
           <input type="hidden" name="id">
         </form>
       </div>
@@ -32,14 +34,7 @@
         props: ['lang'],
         methods: {
           changeFocus(e){
-            let nextSib = e.target.nextElementSibling;
-            let prevSib = e.target.previousElementSibling;
-
-            if(e.target.value != ''){
-              nextSib.focus();
-            } else if(e.target.value === '') {
-                prevSib.focus();
-            }
+            document.getElementById('fake-input').focus();
           },
           getBranchByUID(e) {
             console.log(this);
@@ -54,9 +49,10 @@
 
               axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchByUID/' + uid)
                 .then((resp) => {
-                  if (resp.data.branchId) {
-                    localStorage.setItem('branchid', resp.data.branchId);
-                    localStorage.setItem('qrtype', resp.data.qrType);
+                  if (resp.data.success) {
+                    console.log(resp.data);
+                    localStorage.setItem('branchid', resp.data.message.branchId);
+                    localStorage.setItem('qrtype', resp.data.message.qrType);
                     router.push({name: 'review'});
                     this.$emit('qr-header', true);
                   } else {
@@ -69,19 +65,27 @@
                 })
 
           },
-          validForm(e){
-              // console.log(e.target);
-            e.target.form.querySelector('.error').style.visibility = 'hidden';
-            let uid = '';
-              e.target.form.querySelectorAll('.inputs').forEach((item) => {
-                uid += item.value;
-              });
-            const subInp = e.target.form.querySelector('input[type="submit"]');
-              if(uid.length === 5){
-                subInp.removeAttribute('disabled');
-              } else {
-                subInp.setAttribute('disabled', 'disabled');
+          falseInput(e){
+
+            document.querySelector('.error').style.visibility = 'hidden';
+
+            if(document.querySelectorAll('.autotabbed input')[e.target.value.length-1] != undefined){
+              document.querySelectorAll('.autotabbed input')[e.target.value.length-1].value = e.target.value[e.target.value.length-1];
+            }
+
+            if(!e.target.value[e.target.value.length]){
+
+              if(document.querySelectorAll('.autotabbed input')[e.target.value.length] != undefined){
+                document.querySelectorAll('.autotabbed input')[e.target.value.length].value = '';
               }
+
+            }
+
+            if(e.target.value.length > 5){
+              e.target.value = e.target.value.substr(0, 5);
+            }
+
+
           }
         },
       beforeCreate: function () {
