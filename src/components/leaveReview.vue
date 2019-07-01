@@ -24,7 +24,7 @@
                   </div>
                 </div>
 
-                <input type="text" name="message" :placeholder="lang.leaveReviewCommentField">
+                <input type="text" name="message" :placeholder="lang.leaveReviewCommentField" autocomplete="off">
                 <input type="hidden" name="qrType" :value="qr_type">
               </div>
             </div>
@@ -34,7 +34,7 @@
                 <p style="text-align: center;">{{lang.leaveReviewPhoneHeader}}</p>
                 <div class="input-wrapper">
                   <div class="input-phone">
-                    <vue-tel-input v-model="phone" name="phone" v-bind:placeholder="lang.leaveReviewPhoneNumber"></vue-tel-input>
+                    <vue-tel-input v-model="phone" name="phone" v-bind:placeholder="lang.leaveReviewPhoneNumber" autocomplete="off"></vue-tel-input>
                   </div>
                 </div>
               </div>

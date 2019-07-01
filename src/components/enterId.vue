@@ -1,7 +1,5 @@
 <template>
 
-    <transition appear name="slide-bottom">
-
       <div class="col-12">
         <a href="/" class="logo"><img src="../assets/imgs/avislogo.png" alt="avis.help"></a>
         <form id="branch_uid" @submit="getBranchByUID" >
@@ -25,8 +23,6 @@
           <input type="hidden" name="id">
         </form>
       </div>
-
-    </transition>
 
 </template>
 
