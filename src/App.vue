@@ -8,11 +8,7 @@
     <div class="container" :class="qrHeader ? 'qr-form' : ''">
       <div class="row">
         <div class="col-12">
-
-          <!--<transition name="fade">-->
-            <router-view :lang="lang" @qr-header="qrHeaderChange"></router-view>
-          <!--</transition>-->
-
+            <router-view :userLang="currentLang" :lang="lang" @qr-header="qrHeaderChange"></router-view>
             <goAvisFooter />
         </div>
       </div>

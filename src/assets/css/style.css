@@ -168,10 +168,20 @@ input[type="submit"],
     padding: 20px 62px;
     display: block;
     margin: 0 auto;
+    transition: .2s
 
 }
 
-/* qr form page */
+
+input[type="submit"]:hover{
+    box-shadow: 0 10px 15px 0 rgba(233,86,86,.4);
+    transform: scale(1.01);
+}
+input[type="submit"][disabled]:hover{
+    box-shadow: none;
+    transform: scale(1);
+}
+    /* qr form page */
 
 .qr-form .branch-wrapper,
 .number-form .branch-wrapper{
