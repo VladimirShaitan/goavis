@@ -1,7 +1,7 @@
 <template>
   <div class="branch-wrapper">
     <div class="branch-photo" :style="{ backgroundImage: 'url('+org_logo+')' }"></div>
-    <div class="branch-name">{{org_name}} </div>
+    <div class="branch-name">{{org_name}}</div>
   </div>
 </template>
 
@@ -16,10 +16,11 @@
           }
         },
         created: function () {
-            axios.get('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
+            axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
               .then((resp) => {
-                this._data.org_name = resp.data.organization.name;
+                this._data.org_name = resp.data.name;
                 this._data.org_logo = resp.data.organization.logoUrl;
+                // console.log(resp.data);
               } )
               .catch((error) => {
                 console.log(error);

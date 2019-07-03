@@ -62,7 +62,7 @@
         methods: {
           handleContactForm(e){
             e.preventDefault();
-            axios.post('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/utils/send_email?'+serialize(e.target))
+            axios.post('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/utils/send_email?'+serialize(e.target))
               .then((resp) => {
                 if(resp.data.success){
                   e.target.querySelector('.message-send').style.opacity = 1;
@@ -79,7 +79,7 @@
           testAccRev(e){
             e.preventDefault();
             // (51, 'GENERAL')
-            localStorage.setItem('branchid', 51);
+            localStorage.setItem('branchid', 70);
             localStorage.setItem('qrtype', 'GENERAL');
             router.push({name: 'review'})
           }
