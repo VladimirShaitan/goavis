@@ -59,7 +59,7 @@
           this.barnch_id = localStorage.getItem('branchid');
           this.qr_type = localStorage.getItem('qrtype');
 
-          axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+this.barnch_id )
+          axios.get('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+this.barnch_id )
             .then((resp) => {
               this._data.org_name = resp.data.organization.name;
               this._data.org_logo = resp.data.organization.logoUrl;
@@ -77,7 +77,7 @@
 
             e.preventDefault();
 
-            axios.post('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/nps/addNps?'+ serialize(e.target))
+            axios.post('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/nps/addNps?'+ serialize(e.target))
               .then(function (resp) {
                 // console.log(resp.data)
                 router.push({name: 'finish'});

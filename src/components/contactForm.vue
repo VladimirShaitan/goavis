@@ -62,7 +62,7 @@
         methods: {
           handleContactForm(e){
             e.preventDefault();
-            axios.post('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/utils/send_email?'+serialize(e.target))
+            axios.post('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/utils/send_email?'+serialize(e.target))
               .then((resp) => {
                 if(resp.data.success){
                   e.target.querySelector('.message-send').style.opacity = 1;

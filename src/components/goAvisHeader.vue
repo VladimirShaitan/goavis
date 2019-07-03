@@ -16,7 +16,7 @@
           }
         },
         created: function () {
-            axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
+            axios.get('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
               .then((resp) => {
                 this._data.org_name = resp.data.organization.name;
                 this._data.org_logo = resp.data.organization.logoUrl;

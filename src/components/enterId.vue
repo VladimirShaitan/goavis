@@ -48,7 +48,7 @@
             console.log(uid.length);
             let errorBlock = e.target.querySelector('.error');
 
-              axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchByUID/' + uid)
+              axios.get('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchByUID/' + uid)
                 .then((resp) => {
                   if (resp.data.success) {
                     console.log(resp.data);
