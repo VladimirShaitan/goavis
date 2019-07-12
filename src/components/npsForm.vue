@@ -77,7 +77,7 @@
 
             e.preventDefault();
 
-            axios.post('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/nps/addNps?'+ serialize(e.target))
+            axios.post('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/nps/addNps?'+ serialize(e.target))
               .then(function (resp) {
                 // console.log(resp.data)
                 router.push({name: 'finish'});

@@ -90,7 +90,7 @@
             let imagefile = document.querySelector('#my_image_upload');
             formData.append('file', imagefile.files[0]);
 
-            let apiUrl = 'http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/review/addReview/'+this.barnch_id+'?'+ serialize(e.target)+'&lang='+this.$props.lang.lang;
+            let apiUrl = 'https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/review/addReview/'+this.barnch_id+'?'+ serialize(e.target)+'&lang='+this.$props.lang.lang;
             // console.log(apiUrl);
             axios.post(apiUrl, formData)
               .then(function (resp) {

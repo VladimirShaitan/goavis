@@ -16,11 +16,16 @@
           }
         },
         created: function () {
-            axios.get('http://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
+            axios.get('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
               .then((resp) => {
                 this._data.org_name = resp.data.name;
-                this._data.org_logo = resp.data.organization.logoUrl;
-                // console.log(resp.data);
+                if(resp.data.branchLogoUrl){
+                  this._data.org_logo = resp.data.branchLogoUrl;
+                } else {
+                  this._data.org_logo = resp.data.organization.logoUrl;
+                }
+
+                console.log(resp.data);
               } )
               .catch((error) => {
                 console.log(error);
