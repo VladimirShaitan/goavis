@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-12">
             <router-view :userLang="currentLang" :lang="lang" @qr-header="qrHeaderChange"></router-view>
-            <goAvisFooter v-if="$route.name != 'main'"/>
+            <goAvisFooter />
         </div>
       </div>
     </div>
