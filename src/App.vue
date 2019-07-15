@@ -55,7 +55,7 @@
 
     },
     created: function () {
-      console.log(this.$router.currentRoute);
+      // console.log(this.$router.currentRoute);
 
       // localisation
       if(coockies.get('lang') === undefined){
@@ -71,7 +71,7 @@
 
 
         if( ( coockies.findGetFromUrl('branchid') && coockies.findGetFromUrl('qrtype')) != null ){
-            console.log('ok');
+            // console.log('ok');
 
             localStorage.setItem('branchid', coockies.findGetFromUrl('branchid'));
             localStorage.setItem('qrtype', coockies.findGetFromUrl('qrtype'));

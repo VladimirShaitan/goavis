@@ -34,7 +34,8 @@
                 <p style="text-align: center;">{{lang.leaveReviewPhoneHeader}}</p>
                 <div class="input-wrapper">
                   <div class="input-phone">
-                    <vue-tel-input v-model="phone" name="phone" v-bind:placeholder="lang.leaveReviewPhoneNumber" autocomplete="off"></vue-tel-input>
+                    <vue-tel-input v-model="phone" name="phone"  v-bind="telSettings"  autocomplete="off"></vue-tel-input>
+                    <!-- v-bind:placeholder="lang.leaveReviewPhoneNumber" -->
                   </div>
                 </div>
               </div>
@@ -76,11 +77,33 @@
           org_logo: '',
           qr_type: '',
           phone: '',
+          prefCountries: {
+            RU: ['BY', 'UA', 'RU'],
+            UA: ['BY', 'UA', 'RU'],
+            GB: ['AU', 'CA', 'GB', 'IE', 'NZ', 'US'],
+            FR: ['AU', 'CA', 'GB', 'IE', 'NZ', 'US']
+          },
+          telSettings: {
+            ignoredCountries: ['BA', 'CF', 'CD', 'DO', 'KP', 'MF', 'PM', 'VC', 'ST', 'GF', 'PF', 'MK', 'NC', 'AE', 'WF', 'CG', 'GQ'],
+            wrapperClasses: 'telInputWrapper',
+            preferredCountries: [],
+            defaultCountry: '',
+            placeholder: '',
+          },
         }
       },
       created: function () {
         this.barnch_id = localStorage.getItem('branchid');
         this.qr_type = localStorage.getItem('qrtype');
+        this.telSettings.preferredCountries = this.prefCountries[this.$props.lang.country];
+        this.telSettings.defaultCountry = this.$props.lang.country;
+        this.telSettings.placeholder = this.$props.lang.leaveReviewPhoneNumber;
+      //leaveReviewPhoneNumber
+      },
+      updated: function () {
+        this.telSettings.preferredCountries = this.prefCountries[this.$props.lang.country];
+        this.telSettings.defaultCountry = this.$props.lang.lang.toUpperCase();
+        this.telSettings.placeholder = this.$props.lang.leaveReviewPhoneNumber;
       },
       methods:{
           sendReview(e){
@@ -94,7 +117,7 @@
             // console.log(apiUrl);
             axios.post(apiUrl, formData)
               .then(function (resp) {
-                console.log(resp.data);
+                // console.log(resp.data);
                 if(resp.data.success){
                   router.push({name: 'nps'});
                 }
@@ -120,15 +143,16 @@
 
 
 <style scoped>
+
   .vue-tel-input{
     border: none;
   }
+
 
   .vue-tel-input:focus-within{
     box-shadow: none
   }
   @media(max-width: 420px){
     .lr{width: 100%}
-
   }
 </style>

@@ -25,7 +25,7 @@
                   this._data.org_logo = resp.data.organization.logoUrl;
                 }
 
-                console.log(resp.data);
+                // console.log(resp.data);
               } )
               .catch((error) => {
                 console.log(error);

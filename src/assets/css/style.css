@@ -728,6 +728,9 @@ form {
     transition: .3s;
     opacity: 0;
 }
+.telInputWrapper div.dropdown ul{
+    width: 338px;
+}
 #fake-input{
     position: absolute;
     /*right: 4000px;*/
