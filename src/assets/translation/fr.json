@@ -1,6 +1,7 @@
 {
 	"lang":"fr",
 	"country":"FR",
+	"basePhoneMask": "FR",
 	"contactHeader": "Laissez vos informations",
 	"contactPlName": "Prénom",
 	"contactPlEmail": "Email",

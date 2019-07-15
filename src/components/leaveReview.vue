@@ -78,8 +78,8 @@
           qr_type: '',
           phone: '',
           prefCountries: {
-            RU: ['BY', 'UA', 'RU'],
-            UA: ['BY', 'UA', 'RU'],
+            RU: ['UA', 'BY', 'RU'],
+            UA: ['RU', 'BY', 'UA'],
             GB: ['AU', 'CA', 'GB', 'IE', 'NZ', 'US'],
             FR: ['AU', 'CA', 'GB', 'IE', 'NZ', 'US']
           },
@@ -96,13 +96,13 @@
         this.barnch_id = localStorage.getItem('branchid');
         this.qr_type = localStorage.getItem('qrtype');
         this.telSettings.preferredCountries = this.prefCountries[this.$props.lang.country];
-        this.telSettings.defaultCountry = this.$props.lang.country;
+        this.telSettings.defaultCountry = this.$props.lang.basePhoneMask;
         this.telSettings.placeholder = this.$props.lang.leaveReviewPhoneNumber;
       //leaveReviewPhoneNumber
       },
       updated: function () {
         this.telSettings.preferredCountries = this.prefCountries[this.$props.lang.country];
-        this.telSettings.defaultCountry = this.$props.lang.lang.toUpperCase();
+        this.telSettings.defaultCountry = this.$props.lang.basePhoneMask;
         this.telSettings.placeholder = this.$props.lang.leaveReviewPhoneNumber;
       },
       methods:{

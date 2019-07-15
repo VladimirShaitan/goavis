@@ -1,6 +1,7 @@
 {
-	"lang":"en",
-    "country":"GB",
+	"lang": "en",
+    "country": "GB",
+    "basePhoneMask": "GB",
 	"contactHeader": "Leave your information",
     "contactPlName": "Name",
     "contactPlEmail": "Email",

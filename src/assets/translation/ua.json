@@ -1,6 +1,7 @@
 {
 	"lang": "ua",
 	"country": "UA",
+	"basePhoneMask": "UA",
 	"contactHeader": "Залиште ваші контакти",
 	"contactPlName": "Ім'я",
 	"contactPlEmail": "Email",

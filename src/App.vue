@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col-12">
             <router-view :userLang="currentLang" :lang="lang" @qr-header="qrHeaderChange"></router-view>
-            <goAvisFooter />
+            <goAvisFooter v-if="$route.name != 'main'"/>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@
     methods: {
       changeLang(langIndex){
         this.lang = get_translations(langIndex);
-        coockies.set('lang', langIndex);
+        coockies.set('lang', langIndex, {path: '/'});
       },
       qrHeaderChange(show){
         this.qrHeader = show
@@ -59,7 +59,7 @@
 
       // localisation
       if(coockies.get('lang') === undefined){
-            coockies.set('lang', user_defaults.language);
+            coockies.set('lang', user_defaults.language, {path: '/'});
             this.lang = get_translations(user_defaults.language);
       } else {
             this.lang = get_translations(coockies.get('lang'));

@@ -1,6 +1,7 @@
 {
 	"lang":"ru",
 	"country": "RU",
+	"basePhoneMask": "UA",
 	"contactHeader": "Оставьте ваши контакты",
 	"contactPlName": "Имя",
 	"contactPlEmail": "Email",
