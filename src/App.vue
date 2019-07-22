@@ -89,10 +89,13 @@
 
 
       // go back button(forward) handler
-
+        let cta_landing = document.referrer.indexOf('cta');
         window.onpopstate = function() {
+          if(cta_landing){
+            window.history.forward(1)
+          }
           localStorage.clear();
-          router.push({name: 'main'});
+            router.push({name: 'main'});
         };
       // go back button(forward) handler
     }
