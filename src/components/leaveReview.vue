@@ -99,6 +99,8 @@
         this.telSettings.defaultCountry = this.$props.lang.basePhoneMask;
         this.telSettings.placeholder = this.$props.lang.leaveReviewPhoneNumber;
       //leaveReviewPhoneNumber
+
+
       },
       updated: function () {
         this.telSettings.preferredCountries = this.prefCountries[this.$props.lang.country];

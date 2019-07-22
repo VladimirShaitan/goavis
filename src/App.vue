@@ -22,7 +22,8 @@
 <script>
   import langSwitcher from './components/langSwitcher.vue';
   import goAvisFooter from './components/goAvisFooter.vue';
-  import coockies from './assets/js/coockies.js';
+  import coockies from './assets/js/coockies';
+  import router from './assets/js/router';
   import ru from './assets/translation/ru.json';
   import en from './assets/translation/en.json';
   import fr from './assets/translation/fr.json';
@@ -86,6 +87,14 @@
 
       // save GET paramethers
 
+
+      // go back button(forward) handler
+
+        window.onpopstate = function() {
+          localStorage.clear();
+          router.push({name: 'main'});
+        };
+      // go back button(forward) handler
     }
   }
 

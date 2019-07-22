@@ -29,6 +29,6 @@
             org_name: '',
             org_logo: ''
           }
-        }
+        },
     }
 </script>
