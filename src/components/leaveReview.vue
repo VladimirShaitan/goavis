@@ -45,7 +45,6 @@
                 <image-uploader
                   :preview="true"
                   :className="['fileinput', { 'fileinput--loaded': hasImage }]"
-                  capture="environment"
                   :debug="0"
                   :autoRotate="true"
                   outputFormat="blob"
