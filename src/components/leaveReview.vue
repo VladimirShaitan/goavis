@@ -42,11 +42,32 @@
             </div>
             <div class="form-footer">
               <div class="branch-id-wrapper image-download">
-                <label for="my_image_upload" class="label-upload"></label>
-                <input type="file" id="my_image_upload"  multiple="false" accept="image/*" />
+                <image-uploader
+                  :preview="true"
+                  :className="['fileinput', { 'fileinput--loaded': hasImage }]"
+                  capture="environment"
+                  :debug="0"
+                  :autoRotate="true"
+                  outputFormat="blob"
+                  @input="setImage"
+                  :maxWidth="400"
+                  :maxHeight="500"
+                  :quality="0.7"
+                >
+                  <label for="fileInput" slot="upload-label">
+                    <figure>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                        <path class="path1" d="M9.5 19c0 3.59 2.91 6.5 6.5 6.5s6.5-2.91 6.5-6.5-2.91-6.5-6.5-6.5-6.5 2.91-6.5 6.5zM30 8h-7c-0.5-2-1-4-3-4h-8c-2 0-2.5 2-3 4h-7c-1.1 0-2 0.9-2 2v18c0 1.1 0.9 2 2 2h28c1.1 0 2-0.9 2-2v-18c0-1.1-0.9-2-2-2zM16 27.875c-4.902 0-8.875-3.973-8.875-8.875s3.973-8.875 8.875-8.875c4.902 0 8.875 3.973 8.875 8.875s-3.973 8.875-8.875 8.875zM30 14h-4v-2h4v2z"></path>
+                      </svg>
+                    </figure>
+                  </label>
+
+
+                </image-uploader>
               </div>
 
               <input id="submit_my_image_upload" name="submit_my_image_upload" type="submit" disabled :value="lang.leaveReviewFormSubmit" />
+
             </div>
           </form>
         </transition>
@@ -55,13 +76,16 @@
 </template>
 
 <script>
+  import Vue from 'vue';
   import VueTelInput from 'vue-tel-input';
   import 'vue-tel-input/dist/vue-tel-input.css';
   import coockies from '../assets/js/coockies.js'
   import serialize from  '../assets/js/serialize.js'
   import axios from 'axios'
   import goAvisHeader from "./goAvisHeader";
-  import router from '../assets/js/router.js'
+  import router from '../assets/js/router.js';
+  import ImageUploader from 'vue-image-upload-resize'
+  Vue.use(ImageUploader);
 
   export default {
       name: "leaveReview",
@@ -90,6 +114,11 @@
             defaultCountry: '',
             placeholder: '',
           },
+          hasImage: false,
+          image: null,
+          startImageResize: '',
+          endImageResize: '',
+
         }
       },
       created: function () {
@@ -113,10 +142,9 @@
 
             let formData = new FormData();
             let imagefile = document.querySelector('#my_image_upload');
-            formData.append('file', imagefile.files[0]);
+            formData.append('file', this.image);
 
             let apiUrl = 'https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/review/addReview/'+this.barnch_id+'?'+ serialize(e.target)+'&lang='+this.$props.lang.lang;
-            // console.log(apiUrl);
             axios.post(apiUrl, formData)
               .then(function (resp) {
                 // console.log(resp.data);
@@ -136,8 +164,15 @@
           if(e.target.name === 'impression'){
             e.target.form.querySelector('input[type="submit"]').removeAttribute('disabled');
           }
-        }
+        },
 
+        setImage: function (file) {
+          this.hasImage = true;
+          this.image = file;
+
+          document.querySelector('.branch-id-wrapper.image-download label').parentElement.style.position = 'relative';
+          document.querySelector('.branch-id-wrapper.image-download label').classList.add('img_uploader');
+        }
 
     }
   }

@@ -7,6 +7,7 @@
 
 <script>
     import axios from 'axios';
+    import router from '../assets/js/router';
     export default {
         name: "goAvisHeader",
         data(){
@@ -16,7 +17,8 @@
           }
         },
         created: function () {
-            axios.get('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
+          // console.log(this.$route);
+          axios.get('https://qrticket-env.pymmzmsf4z.eu-west-3.elasticbeanstalk.com/api/v0/branch/getBranchInfo/'+localStorage.getItem('branchid'))
               .then((resp) => {
                 this._data.org_name = resp.data.name;
                 if(resp.data.branchLogoUrl){
