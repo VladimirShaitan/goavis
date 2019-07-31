@@ -16,7 +16,7 @@
     "enterIDError": "Wrong id",
     "leaveReviewTopMessage": "If you have any complaints or suggestions regarding the quality of goods or services, please leave a review. All messages will be forwarded to management.",
     "leaveReviewFormHeader": "General Impression*",
-    "leaveReviewCommentField": "Comment",
+    "leaveReviewCommentField": "Describe your impressions",
     "leaveReviewPhoneHeader": "If you want you can leave your number so we can contact you",
     "leaveReviewFormSubmit": "Send",
     "leaveReviewAgreement": "By  pressing button “Send”, you agree with <a href='/terms-of-use/'>terms of use</a>.",

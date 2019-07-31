@@ -16,7 +16,7 @@
 	"enterIDError": "Неправильный ID",
 	"leaveReviewTopMessage": "Если у вас есть какие-либо жалобы или предложения относительно качества товаров или обслуживания, пожалуйста, оставьте отзыв. Все сообщения будут направлены руководству.",
 	"leaveReviewFormHeader": "Общее впечатление*",
-	"leaveReviewCommentField": "Комментарий",
+	"leaveReviewCommentField": "Опишите свои впечатления",
 	"leaveReviewPhoneHeader": "Вы можете оставить свой номер, чтобы мы связались с вами",
 	"leaveReviewFormSubmit": "Отправить",
 	"leaveReviewAgreement": "Нажав кнопку «Отправить», вы принимаете <a href='/terms-of-use/'>правила пользовательского соглашения</a>",

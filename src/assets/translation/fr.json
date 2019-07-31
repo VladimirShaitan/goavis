@@ -16,7 +16,7 @@
 	"enterIDError": "Mauvais identifiant",
 	"leaveReviewTopMessage": "Si vous avez des remarques ou suggestions concernant la qualité des offres ou services, n’hésitez pas à laisser un commentaire. Tous les messages seront transmis à la direction.",
 	"leaveReviewFormHeader": "Impression générale*",
-	"leaveReviewCommentField": "Commentaire",
+	"leaveReviewCommentField": "Décrivez vos impressions",
 	"leaveReviewPhoneHeader": "Si vous le souhaitez, vous pouvez laisser votre numéro et nous vous recontacterons ",
 	"leaveReviewFormSubmit": "Envoyer",
 	"leaveReviewAgreement": "En appuyant sur le bouton «Envoyer», vous acceptez <a href='/terms-of-use/'>les conditions d'utilisation</a>.",
